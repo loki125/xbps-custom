@@ -1,8 +1,7 @@
-#include <xbps-custom/cli.hpp>
+#include <xbps_custom/cli.hpp>
 
-namespace xbps_custom {
-    void cli::parse(int argc, char** argv)
-    {
-        // ...
-    }
+
+void xbps_custom::cli::parse(int argc, char** argv)
+{
+    // ...
 }

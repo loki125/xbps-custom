@@ -7,6 +7,7 @@ set(CMAKE_EXPORT_COMPILE_COMMANDS ON)
 add_executable(xbps-custom
     src/main.cpp
     src/cli.cpp
+    src/packages.cpp
 )
 
 target_include_directories(xbps-custom PRIVATE include)
