@@ -3,6 +3,10 @@
 namespace fs = std::filesystem;
 
 namespace xbps_custom {
+
+    /*
+     * Responsible for managing void-packages and syncing it to the local xbps database.
+     */
     class Packages {
     public:
         Packages();

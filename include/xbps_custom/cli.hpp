@@ -1,16 +1,19 @@
 #include <string>
 #include <filesystem>
 
+#include <xbps_custom/packages.hpp>
+
 namespace fs = std::filesystem;
 
 namespace xbps_custom {
     namespace cli {
         /*
          * Parses the command line arguments and dispatches to the appropriate function.
+         * @param packages The packages to use for parsing.
          * @param argc The number of command line arguments.
          * @param argv The command line arguments.
          */
-        void parse(int argc, char* argv[]);
+        void parse(Packages packages, int argc, char* argv[]);
 
         /*
          * Creates a new package with the given name and a template skeleton.
