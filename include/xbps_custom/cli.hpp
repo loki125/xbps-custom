@@ -46,5 +46,30 @@ namespace xbps_custom {
          * @param pkgname The name of the package to install.
          */
         void install_package(const std::string& pkgname);
+
+        /*
+         * Removes the package with the given name using xbps-remove.
+         * @param pkgname The name of the package to remove.
+         */
+        void remove_package(const std::string& pkgname);
+
+        /*
+         * Lists all custom packages created by xbps-custom.
+         */
+        void list_packages();
+
+        /*
+         * Creates a template for a package and download link using file extation reverse engineering.
+         * @param pkgname The name of the package to create a template for.
+         * @param download_link The download link for the package.
+         */
+        void create_template(const std::string& pkgname, const std::string& download_link);
+
+        /*
+         * Updates the package with the given name to the specified version.
+         * @param pkgname The name of the package to update.
+         * @param version The version to update the package to.
+         */
+        void update_package(const std::string& pkgname, const std::string& version);
     }
 }
