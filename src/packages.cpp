@@ -1,16 +1,24 @@
 #include <xbps_custom/packages.hpp>
 
-xbps_custom::Packages::Packages()
-{
-    // ..
-}
+namespace xbps_custom {
+    Packages::Packages() : m_void_packages_dir(VOID_PKGS_DIR)
+    {}
 
-xbps_custom::Packages::~Packages()
-{
+    Packages::~Packages()
+    {}
 
-}
+    void Packages::update_void_packages()
+    {
 
-void xbps_custom::Packages::update()
-{
+    }
 
+    fs::path Packages:: install_void_packages()
+    {
+        return fs::path();
+    }
+
+    void Packages::sync_local_packages()
+    {
+
+    }
 }

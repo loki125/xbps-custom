@@ -1,4 +1,8 @@
+#pragma once
+
 #include <filesystem>
+
+#include <xbps_custom/utils.hpp>
 
 namespace fs = std::filesystem;
 
@@ -13,15 +17,9 @@ namespace xbps_custom {
         ~Packages();
 
         /**
-         * Updates void-packages and syncs it to local xbps database.
+         * Updates void-packages's git repository.
          */
-        void update();
-
-        /**
-         * Checks for available updates.
-         * @return True if updates are available, false otherwise.
-         */
-        bool check_updates();
+        void update_void_packages();
 
         /**
          * Installs repo void-packages.

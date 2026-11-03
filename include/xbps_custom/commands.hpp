@@ -1,12 +1,16 @@
+#pragma once
+
 #include <string>
 #include <filesystem>
+
 
 #include <xbps_custom/packages.hpp>
 
 namespace fs = std::filesystem;
 
 namespace xbps_custom {
-    namespace cli {
+    namespace commands {
+
         /*
          * Parses the command line arguments and dispatches to the appropriate function.
          * @param packages The packages to use for parsing.
@@ -71,5 +75,12 @@ namespace xbps_custom {
          * @param version The version to update the package to.
          */
         void update_package(const std::string& pkgname, const std::string& version);
+
+        /*
+         * Connects to an existing local void-packages repository at the given path.
+         * @param void_packages_path The path to the void-packages repository.
+         */
+        void connect_void_packages(const fs::path& void_packages_path);
+
     }
 }
